@@ -5,6 +5,7 @@ import Palette from './components/palette/Palette.component';
 import seedPalettes from './seedPalettes';
 import generatePalette from './colorHelper'
 import PaletteList from './components/palette-list/PaletteList.component';
+import SingleColorPalette from './components/single-color-palette/SingleColorPalette.component';
 
 /* Class Component */
 
@@ -22,7 +23,9 @@ class App extends Component {
             palette={generatePalette(this.findPalette(routeProps.match.params.id))}
           />
         ) } />
-        <Route exact path="/palette/:paletteId/:colorId" render={() => <h1>SingleColorPage</h1>} />
+        <Route exact path="/palette/:paletteId/:colorId" render={(routeProps) => <SingleColorPalette      palette={generatePalette(this.findPalette(routeProps.match.params.paletteId))}
+          colorId={routeProps.match.params.colorId}
+        />} />
       </Switch>
   
     //   {/* <div className="App">

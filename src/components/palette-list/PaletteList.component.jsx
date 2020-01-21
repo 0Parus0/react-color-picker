@@ -1,40 +1,9 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom';
 import { withStyles } from '@material-ui/styles';
 
 
 import MiniPalette from '../mini-palette/MiniPalette.component';
-
-const styles = {
-  root: {
-    height: '100vh',
-    backgroundColor: "blue",
-    display: 'flex',
-    alignItems: 'flex-start',
-    justifyContent: 'center',
-  },
-  container: {
-    width: '50%',
-    display: 'flex',
-    alignItems: 'flex-start',
-    flexDirection: 'column',
-    flexWrap: 'wrap',
-  },
-  nav: {
-    display: 'flex',
-    width: '100%',
-    justifyContent: 'space-between',
-    color: 'white',
-  },
-
-  palettes: {
-    boxSizing: 'border-box',
-    width: '100%',
-    display: 'grid',
-    gridTemplateColumns: 'repeat(3, 30%)',
-    gridGap: '5%'
-  },
-}
+import PaletteListStyles from './PaletteList.styles'
 
 export class PaletteList extends Component {
 
@@ -63,5 +32,5 @@ export class PaletteList extends Component {
   }
 }
 
-export default withStyles(styles)(PaletteList)
+export default withStyles(PaletteListStyles)(PaletteList)
 
