@@ -19,6 +19,11 @@ const PaletteListStyles = {
     width: '100%',
     justifyContent: 'space-between',
     color: 'white',
+    alignItems: 'center',
+    "& a": {
+      // textDecoration: 'none',
+      color: 'white'
+    }
   },
 
   palettes: {
