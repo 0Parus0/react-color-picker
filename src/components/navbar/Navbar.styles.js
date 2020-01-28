@@ -1,3 +1,4 @@
+import sizes from '../../sizes'
 const navbarStyles = {
   Navbar: {
     display: 'flex',
@@ -18,6 +19,9 @@ const navbarStyles = {
     "& a":  {
       textDecoration: 'none',
       color: 'black'
+    },
+    [sizes.down('xs')]: {
+      display: 'none',
     }
   },
 
@@ -37,6 +41,9 @@ const navbarStyles = {
       height: '13px',
       marginLeft: '-7px',
       marginTop: '-3px',
+    },
+    [sizes.down('sm')]: {
+      width: '150px'
     },
     "& .rc-slider-track": {
       backgroundColor: 'transparent',

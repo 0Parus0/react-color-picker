@@ -1,4 +1,5 @@
 import chroma from 'chroma-js';
+import sizes from '../../sizes';
 
 
 const ColorBoxStyles = {
@@ -9,10 +10,29 @@ const ColorBoxStyles = {
     display: "inline-block",
     position: "relative",
     cursor: "pointer",
-   " margin-bottom": "-3.9px",
+   " margin-bottom": "-4.5px",
    "&:hover button": {
      opacity: 1
    },
+   [sizes.down('lg')]: {
+    width: '25%',
+    height: (props) => props.showingFullPalette ? "20%" : "33.33333%",
+
+   },
+   [sizes.down('md')]: {
+    width: '50%',
+    height: (props) => props.showingFullPalette ? "10%" : "20%",
+
+   },
+  //  [sizes.down('sm')]: {
+  //   width: '25%',
+  //   height: (props) => props.showingFullPalette ? "20%" : "50%",
+
+  //  },
+   [sizes.down('xs')]: {
+     width: '100%',
+     height: props => props.showingFullPalette ? '5%' : '10%'
+   }
    
   },
   boxContent: {
@@ -101,6 +121,9 @@ const ColorBoxStyles = {
       'margin-bottom':' 0',
       padding:' 1rem',
       'text-transform':' uppercase',
+      [sizes.down('xs')]: {
+        fontSize: '6rem'
+      }
     },
     "& p": {
       'font-size': '2rem',

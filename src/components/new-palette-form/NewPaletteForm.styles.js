@@ -1,5 +1,5 @@
-// import { DRAWER_WIDTH } from "../constants";
-const drawerWidth = '240px';
+import { DRAWER_WIDTH } from "../../constants";
+const drawerWidth = DRAWER_WIDTH;
 
 const newPaletteFormStyles = theme => ({
   root: {
